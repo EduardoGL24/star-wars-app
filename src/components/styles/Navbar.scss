@@ -1,0 +1,23 @@
+.navbar-container-items{
+    .navbar-list{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        list-style: none;
+        .navbar-item{
+            cursor: pointer;
+            a{
+                color: #000;
+            }
+            .navbar-item-lightsaber{
+                width: 90px;
+                opacity: 0;
+            }
+        }
+        .navbar-item:hover{
+            .navbar-item-lightsaber{
+                opacity: 1;
+            }
+        }
+    }
+}

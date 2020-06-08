@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './fonts/Quicksand-Bold.ttf';
+import './fonts/Quicksand-Light.ttf';
+import './fonts/Quicksand-Medium.ttf';
+import './fonts/Quicksand-Regular.ttf';
+import './fonts/Quicksand-SemiBold.ttf';
+
 
 ReactDOM.render(
   <React.StrictMode>

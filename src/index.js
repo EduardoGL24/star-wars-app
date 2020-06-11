@@ -9,6 +9,9 @@ import './fonts/Quicksand-Medium.ttf';
 import './fonts/Quicksand-Regular.ttf';
 import './fonts/Quicksand-SemiBold.ttf';
 
+// Librerias
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'typed.js/lib/typed.js';
 
 ReactDOM.render(
   <React.StrictMode>

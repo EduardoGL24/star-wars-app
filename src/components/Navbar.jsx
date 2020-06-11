@@ -5,7 +5,7 @@ export class Navbar extends Component {
     render() {
         return (
             <React.Fragment>
-                <nav className="navbar row">
+                <nav className="navbar fixed-top row no-margin">
                     <div className="col-md-2">
                         <a className="navbar-brand" href="#">
                             <img src={require('../images/logo.png')} width="200" height="auto" alt="" loading="lazy"/>
@@ -19,27 +19,27 @@ export class Navbar extends Component {
                             </li>
                             <li className="navbar-item">
                                 <a className="nav-link" href="#">Personajes</a>
-                                <img className="navbar-item-lightsaber" src={require('../images/sable.png')} alt=""/>
+                                <img className="navbar-item-lightsaber" src={require('../images/sable.png')}/>
                             </li>
                             <li className="navbar-item">
                                 <a class="nav-link" href="#">Peliculas</a>
-                                <img className="navbar-item-lightsaber" src={require('../images/sable.png')} alt=""/>
+                                <img className="navbar-item-lightsaber" src={require('../images/sable.png')}/>
                             </li>
                             <li className="navbar-item">
                                 <a class="nav-link" href="#">Naves</a>
-                                <img className="navbar-item-lightsaber" src={require('../images/sable.png')} alt=""/>
+                                <img className="navbar-item-lightsaber" src={require('../images/sable.png')}/>
                             </li>
                             <li className="navbar-item">
                                 <a class="nav-link" href="#">Vehiculos</a>
-                                <img className="navbar-item-lightsaber" src={require('../images/sable.png')} alt=""/>
+                                <img className="navbar-item-lightsaber" src={require('../images/sable.png')}/>
                             </li>
                             <li className="navbar-item">
                                 <a class="nav-link" href="#">Especies</a>
-                                <img className="navbar-item-lightsaber" src={require('../images/sable.png')} alt=""/>
+                                <img className="navbar-item-lightsaber" src={require('../images/sable.png')}/>
                             </li>
                             <li className="navbar-item">
                                 <a class="nav-link" href="#">Planetas</a>
-                                <img className="navbar-item-lightsaber" src={require('../images/sable.png')} alt=""/>
+                                <img className="navbar-item-lightsaber" src={require('../images/sable.png')}/>
                             </li>
                         </ul>
                     </div>

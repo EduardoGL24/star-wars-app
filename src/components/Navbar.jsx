@@ -1,44 +1,59 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './styles/Navbar.scss';
 
 export class Navbar extends Component {
+
+    componentDidMount(){
+        window.addEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll(){
+        const navbar = document.getElementById('navbar-fixed');
+        console.log(window.pageYOffset);
+        if(window.pageYOffset > 0){
+            navbar.classList.add('navbar-color')
+        } else if (window.pageYOffset === 0){
+            navbar.classList.remove('navbar-color');
+        }
+    }
     render() {
         return (
             <React.Fragment>
-                <nav className="navbar fixed-top row no-margin">
+                <nav className="navbar fixed-top row no-margin" id="navbar-fixed">
                     <div className="col-md-2">
-                        <a className="navbar-brand" href="#">
+                        <Link to="/" className="navbar-brand" href="#">
                             <img src={require('../images/logo.png')} width="200" height="auto" alt="" loading="lazy"/>
-                        </a>
+                        </Link>
                     </div>
                     <div className="col-md-10 navbar-container-items">
                         <ul className="navbar-list">
                             <li className="navbar-item">
-                                <a className="nav-link" href="#">Home</a>
+                                <Link to="/" className="nav-link" href="#">Home</Link>
                                 <img className="navbar-item-lightsaber" src={require('../images/sable.png')} alt=""/>
                             </li>
                             <li className="navbar-item">
-                                <a className="nav-link" href="#">Personajes</a>
+                                <Link to="/characters" className="nav-link" href="#">Personajes</Link>
                                 <img className="navbar-item-lightsaber" src={require('../images/sable.png')}/>
                             </li>
                             <li className="navbar-item">
-                                <a class="nav-link" href="#">Peliculas</a>
+                                <a className="nav-link" href="#">Peliculas</a>
                                 <img className="navbar-item-lightsaber" src={require('../images/sable.png')}/>
                             </li>
                             <li className="navbar-item">
-                                <a class="nav-link" href="#">Naves</a>
+                                <a className="nav-link" href="#">Naves</a>
                                 <img className="navbar-item-lightsaber" src={require('../images/sable.png')}/>
                             </li>
                             <li className="navbar-item">
-                                <a class="nav-link" href="#">Vehiculos</a>
+                                <a className="nav-link" href="#">Vehiculos</a>
                                 <img className="navbar-item-lightsaber" src={require('../images/sable.png')}/>
                             </li>
                             <li className="navbar-item">
-                                <a class="nav-link" href="#">Especies</a>
+                                <a className="nav-link" href="#">Especies</a>
                                 <img className="navbar-item-lightsaber" src={require('../images/sable.png')}/>
                             </li>
                             <li className="navbar-item">
-                                <a class="nav-link" href="#">Planetas</a>
+                                <a className="nav-link" href="#">Planetas</a>
                                 <img className="navbar-item-lightsaber" src={require('../images/sable.png')}/>
                             </li>
                         </ul>

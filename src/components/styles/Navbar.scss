@@ -1,6 +1,12 @@
 .navbar{
     background-color: transparent;
-    //background-color: #fff;
+}
+.navbar-color{
+    background-color: #FFE81F !important;
+    a{
+        color: #000 !important;
+        text-shadow: none !important;
+    }
 }
 .navbar-container-items{
     .navbar-list{
@@ -12,6 +18,7 @@
             cursor: pointer;
             a{
                 color: #FFF;
+                text-align: center;
                 text-shadow: 0 0 0.1em #000, 0 0 0.1em #000,0 0 0.1em #000;
             }
             .navbar-item-lightsaber{

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Typed from 'typed.js'
 import './styles/Home.scss'
+import { Link } from 'react-router-dom'
 
 export class Home extends Component {
 
@@ -30,7 +31,9 @@ export class Home extends Component {
                     <div className="home-text-description">
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias maiores sit, repellat sed harum officiis </p>
                     </div>
-                    <a className="btn-home">¡Vamos!</a>
+                    <div className="home-button-container">
+                        <Link className="btn-home" to="characters">¡Vamos!</Link>
+                    </div>
                 </div>
             </React.Fragment>
         )

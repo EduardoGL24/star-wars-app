@@ -11,8 +11,7 @@ async function callApi(endpoint) {
 const api = {
     data: {
         people(page){
-            return callApi('people/')
-            //return callApi(`people/?page=${page}`);
+            return callApi(`people/?page=${page}`);
         }
     }
 }

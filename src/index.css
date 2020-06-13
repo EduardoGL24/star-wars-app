@@ -33,3 +33,6 @@ body{
 .no-padding{
   margin: 0px !important;
 }
+.btn{
+  text-transform: uppercase;
+}

@@ -1,0 +1,337 @@
+.page {
+  display: -webkit-box;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.loader {
+  width: 200px;
+  height: 200px;
+  font-size: 0;
+  overflow: hidden;
+  text-align: center;
+}
+.dot {
+  background: #282d30;
+  width: 16%;
+  height: 16%;
+  margin: 5%;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  -webkit-animation: 3s infinite;
+          animation: 3s infinite;
+}
+.style-diagonal .dot1A {
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+  -webkit-animation-name: diagonaldot1A;
+          animation-name: diagonaldot1A;
+}
+@-webkit-keyframes diagonaldot1A {
+  0% {
+    background: #282d30;
+  }
+  32.61% {
+    background: #e8e8e8;
+  }
+  50% {
+    background: #e8e8e8;
+  }
+  82.61% {
+    background: #282d30;
+  }
+}
+@keyframes diagonaldot1A {
+  0% {
+    background: #282d30;
+  }
+  32.61% {
+    background: #e8e8e8;
+  }
+  50% {
+    background: #e8e8e8;
+  }
+  82.61% {
+    background: #282d30;
+  }
+}
+.style-diagonal .dot2A {
+  -webkit-transition-delay: 75ms;
+          transition-delay: 75ms;
+  -webkit-animation-name: diagonaldot2A;
+          animation-name: diagonaldot2A;
+}
+@-webkit-keyframes diagonaldot2A {
+  4.35% {
+    background: #282d30;
+  }
+  36.96% {
+    background: #e8e8e8;
+  }
+  54.35% {
+    background: #e8e8e8;
+  }
+  86.96% {
+    background: #282d30;
+  }
+}
+@keyframes diagonaldot2A {
+  4.35% {
+    background: #282d30;
+  }
+  36.96% {
+    background: #e8e8e8;
+  }
+  54.35% {
+    background: #e8e8e8;
+  }
+  86.96% {
+    background: #282d30;
+  }
+}
+.style-diagonal .dot1B {
+  -webkit-transition-delay: 75ms;
+          transition-delay: 75ms;
+  -webkit-animation-name: diagonaldot1B;
+          animation-name: diagonaldot1B;
+}
+@-webkit-keyframes diagonaldot1B {
+  4.35% {
+    background: #282d30;
+  }
+  36.96% {
+    background: #e8e8e8;
+  }
+  54.35% {
+    background: #e8e8e8;
+  }
+  86.96% {
+    background: #282d30;
+  }
+}
+@keyframes diagonaldot1B {
+  4.35% {
+    background: #282d30;
+  }
+  36.96% {
+    background: #e8e8e8;
+  }
+  54.35% {
+    background: #e8e8e8;
+  }
+  86.96% {
+    background: #282d30;
+  }
+}
+.style-diagonal .dot3A {
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
+  -webkit-animation-name: diagonaldot3A;
+          animation-name: diagonaldot3A;
+}
+@-webkit-keyframes diagonaldot3A {
+  8.7% {
+    background: #282d30;
+  }
+  41.3% {
+    background: #e8e8e8;
+  }
+  58.7% {
+    background: #e8e8e8;
+  }
+  91.3% {
+    background: #282d30;
+  }
+}
+@keyframes diagonaldot3A {
+  8.7% {
+    background: #282d30;
+  }
+  41.3% {
+    background: #e8e8e8;
+  }
+  58.7% {
+    background: #e8e8e8;
+  }
+  91.3% {
+    background: #282d30;
+  }
+}
+.style-diagonal .dot2B {
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
+  -webkit-animation-name: diagonaldot2B;
+          animation-name: diagonaldot2B;
+}
+@-webkit-keyframes diagonaldot2B {
+  8.7% {
+    background: #282d30;
+  }
+  41.3% {
+    background: #e8e8e8;
+  }
+  58.7% {
+    background: #e8e8e8;
+  }
+  91.3% {
+    background: #282d30;
+  }
+}
+@keyframes diagonaldot2B {
+  8.7% {
+    background: #282d30;
+  }
+  41.3% {
+    background: #e8e8e8;
+  }
+  58.7% {
+    background: #e8e8e8;
+  }
+  91.3% {
+    background: #282d30;
+  }
+}
+.style-diagonal .dot1C {
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
+  -webkit-animation-name: diagonaldot1C;
+          animation-name: diagonaldot1C;
+}
+@-webkit-keyframes diagonaldot1C {
+  8.7% {
+    background: #282d30;
+  }
+  41.3% {
+    background: #e8e8e8;
+  }
+  58.7% {
+    background: #e8e8e8;
+  }
+  91.3% {
+    background: #282d30;
+  }
+}
+@keyframes diagonaldot1C {
+  8.7% {
+    background: #282d30;
+  }
+  41.3% {
+    background: #e8e8e8;
+  }
+  58.7% {
+    background: #e8e8e8;
+  }
+  91.3% {
+    background: #282d30;
+  }
+}
+.style-diagonal .dot3B {
+  -webkit-transition-delay: 225ms;
+          transition-delay: 225ms;
+  -webkit-animation-name: diagonaldot3B;
+          animation-name: diagonaldot3B;
+}
+@-webkit-keyframes diagonaldot3B {
+  13.04% {
+    background: #282d30;
+  }
+  45.65% {
+    background: #e8e8e8;
+  }
+  63.04% {
+    background: #e8e8e8;
+  }
+  95.65% {
+    background: #282d30;
+  }
+}
+@keyframes diagonaldot3B {
+  13.04% {
+    background: #282d30;
+  }
+  45.65% {
+    background: #e8e8e8;
+  }
+  63.04% {
+    background: #e8e8e8;
+  }
+  95.65% {
+    background: #282d30;
+  }
+}
+.style-diagonal .dot2C {
+  -webkit-transition-delay: 225ms;
+          transition-delay: 225ms;
+  -webkit-animation-name: diagonaldot2C;
+          animation-name: diagonaldot2C;
+}
+@-webkit-keyframes diagonaldot2C {
+  13.04% {
+    background: #282d30;
+  }
+  45.65% {
+    background: #e8e8e8;
+  }
+  63.04% {
+    background: #e8e8e8;
+  }
+  95.65% {
+    background: #282d30;
+  }
+}
+@keyframes diagonaldot2C {
+  13.04% {
+    background: #282d30;
+  }
+  45.65% {
+    background: #e8e8e8;
+  }
+  63.04% {
+    background: #e8e8e8;
+  }
+  95.65% {
+    background: #282d30;
+  }
+}
+.style-diagonal .dot3C {
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+  -webkit-animation-name: diagonaldot3C;
+          animation-name: diagonaldot3C;
+}
+@-webkit-keyframes diagonaldot3C {
+  17.39% {
+    background: #282d30;
+  }
+  50% {
+    background: #e8e8e8;
+  }
+  67.39% {
+    background: #e8e8e8;
+  }
+  100% {
+    background: #282d30;
+  }
+}
+@keyframes diagonaldot3C {
+  17.39% {
+    background: #282d30;
+  }
+  50% {
+    background: #e8e8e8;
+  }
+  67.39% {
+    background: #e8e8e8;
+  }
+  100% {
+    background: #282d30;
+  }
+}

@@ -6,26 +6,28 @@ import Loader from "../components/Loader";
 
 export class Characters extends Component {
   state = {
-    error: null,
+    error: false,
     loading: true,
-    page: 1,
     items: [],
   };
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.fetchData();
   }
 
   fetchData = async () => {
-    this.setState({ loading: true, error: null });
+    this.setState({ loading: true, error: false });
     try {
       const data = await api.data.getCharacters();
       this.setState({
         loading: false,
         items: data,
+        error: false,
       });
     } catch (error) {
       console.log(error);
+      this.setState({ loading: false, error: true });
     }
   };
 

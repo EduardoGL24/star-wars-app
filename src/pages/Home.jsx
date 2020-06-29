@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 
 export class Home extends Component {
   componentDidMount() {
-    const typed = new Typed(".clase", {
+    window.scrollTo(0, 0);
+    new Typed(".clase", {
       strings: [
         '<i className="text-animated">personajes</i>',
         '<i className="text-animated">peliculas</i>',

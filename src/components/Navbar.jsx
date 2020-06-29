@@ -25,7 +25,7 @@ export class Navbar extends Component {
                 src={require("../images/logo.png")}
                 width="200"
                 height="auto"
-                alt=""
+                alt="Star wars"
                 loading="lazy"
               />
             </Link>
@@ -49,51 +49,57 @@ export class Navbar extends Component {
                 <img
                   className="navbar-item-lightsaber"
                   src={require("../images/sable.png")}
+                  alt=""
                 />
               </li>
               <li className="navbar-item">
-                <a className="nav-link" href="#">
+                <Link to="/characters" className="nav-link" href="#">
                   Peliculas
-                </a>
+                </Link>
                 <img
                   className="navbar-item-lightsaber"
                   src={require("../images/sable.png")}
+                  alt=""
                 />
               </li>
               <li className="navbar-item">
-                <a className="nav-link" href="#">
-                  Naves
-                </a>
+                <Link to="/characters" className="nav-link" href="#">
+                  Personajes
+                </Link>
                 <img
                   className="navbar-item-lightsaber"
                   src={require("../images/sable.png")}
+                  alt=""
                 />
               </li>
               <li className="navbar-item">
-                <a className="nav-link" href="#">
+                <Link to="/characters" className="nav-link" href="#">
                   Vehiculos
-                </a>
+                </Link>
                 <img
                   className="navbar-item-lightsaber"
                   src={require("../images/sable.png")}
+                  alt=""
                 />
               </li>
               <li className="navbar-item">
-                <a className="nav-link" href="#">
+                <Link to="/characters" className="nav-link" href="#">
                   Especies
-                </a>
+                </Link>
                 <img
                   className="navbar-item-lightsaber"
                   src={require("../images/sable.png")}
+                  alt=""
                 />
               </li>
               <li className="navbar-item">
-                <a className="nav-link" href="#">
+                <Link to="/characters" className="nav-link" href="#">
                   Planetas
-                </a>
+                </Link>
                 <img
                   className="navbar-item-lightsaber"
                   src={require("../images/sable.png")}
+                  alt=""
                 />
               </li>
             </ul>

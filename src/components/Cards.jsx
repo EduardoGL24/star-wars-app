@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export const Cards = (props) => {
+  console.log(props.items);
   const [word, setWord] = useState("");
   const [filterDisplay, setFilterDisplay] = useState(props.items);
   const capitalizeWord = (w) => {
     return w.replace(/\b[a-z]/g, (c) => c.toUpperCase());
   };
+  const getIdInfo = (arg) => arg.replace(/\D/g, "");
+
   const handdleChange = (e) => {
     let oldList = props.items.map((item) => {
       return {
@@ -20,15 +23,15 @@ export const Cards = (props) => {
       newList = oldList.filter((item) =>
         item.name.includes(capitalizeWord(word))
       );
-      if (newList.length == 0) {
+      if (newList.length === 0) {
         setFilterDisplay(emptyList);
       } else {
         setFilterDisplay(newList);
       }
     }
-    if (e == "") return setFilterDisplay(oldList);
+    if (e === "") return setFilterDisplay(oldList);
   };
-  if (filterDisplay.length == 0) {
+  if (filterDisplay.length === 0) {
     return (
       <div>
         <div className="characters-search-bar mb-5">
@@ -66,7 +69,7 @@ export const Cards = (props) => {
               <h5 className="card-title">{item.name}</h5>
               <Link
                 className="btn btn-outline-primary btn-block"
-                to={`${props.folder}/${item.name.replace(/ /g, "")}`}
+                to={`${props.folder}/${getIdInfo(item.url)}`}
               >
                 Ver más
               </Link>

@@ -20,10 +20,24 @@ async function getAllPeople() {
 
   return people;
 }
+
+async function getAllItems(endpoint, ids) {
+  const items = [];
+  for (let i = 0; i < ids.length; i++) {
+    items.push(await callApi(`${endpoint}/${ids[i].replace(/\D/g, "")}`));
+  }
+  return items;
+}
 const api = {
   data: {
     getCharacters() {
       return getAllPeople();
+    },
+    getInfoCharacter(id) {
+      return callApi(`people/${id}`);
+    },
+    getInfoNames(endpoint, ids) {
+      return getAllItems(endpoint, ids);
     },
   },
 };

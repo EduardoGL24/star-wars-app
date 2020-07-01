@@ -63,8 +63,8 @@ export class Navbar extends Component {
                 />
               </li>
               <li className="navbar-item">
-                <Link to="/characters" className="nav-link" href="#">
-                  Personajes
+                <Link to="/starships" className="nav-link" href="#">
+                  Naves
                 </Link>
                 <img
                   className="navbar-item-lightsaber"

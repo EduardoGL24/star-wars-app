@@ -7,12 +7,12 @@ async function callApi(endpoint) {
 
   return data;
 }
-async function getAllPeople() {
-  const data = await callApi(`people/?page=${1}`);
+async function getAllData(endpoint) {
+  const data = await callApi(`${endpoint}/?page=${1}`);
   const pages = Math.ceil((data.count - 1) / 10);
   const items = [];
   for (let i = 1; i <= pages; i++) {
-    items.push(await callApi(`people/?page=${i}`));
+    items.push(await callApi(`${endpoint}/?page=${i}`));
   }
   const people = items.reduce(function (accum, obj) {
     return [...accum, ...obj.results];
@@ -30,8 +30,9 @@ async function getAllItems(endpoint, ids) {
 }
 const api = {
   data: {
-    getCharacters() {
-      return getAllPeople();
+    getData(endpoint) {
+      console.log(endpoint);
+      return getAllData(endpoint);
     },
     getInfoCharacter(id) {
       return callApi(`people/${id}`);

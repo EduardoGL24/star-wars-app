@@ -14,6 +14,7 @@ export const Cards = (props) => {
     let oldList = props.items.map((item) => {
       return {
         name: item.name,
+        title: item.title,
       };
     });
     if (e !== "") {
@@ -61,7 +62,9 @@ export const Cards = (props) => {
         {filterDisplay.map((item, i) => (
           <div key={i} className="card">
             <img
-              src={require(`../images/${props.folder}/${item.name}.jpg`)}
+              src={require(`../images/${props.folder}/${
+                item.name || item.title
+              }.jpg`)}
               className="card-img-top"
               alt={item.name}
             />

@@ -53,7 +53,7 @@ export class Navbar extends Component {
                 />
               </li>
               <li className="navbar-item">
-                <Link to="/characters" className="nav-link" href="#">
+                <Link to="/films" className="nav-link" href="#">
                   Peliculas
                 </Link>
                 <img
@@ -73,7 +73,7 @@ export class Navbar extends Component {
                 />
               </li>
               <li className="navbar-item">
-                <Link to="/characters" className="nav-link" href="#">
+                <Link to="/vehicles" className="nav-link" href="#">
                   Vehiculos
                 </Link>
                 <img

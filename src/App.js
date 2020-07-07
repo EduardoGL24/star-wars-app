@@ -8,6 +8,7 @@ import Character from "./pages/Character";
 import Starships from "./pages/starships";
 import Films from "./pages/Films";
 import Vehicles from "./pages/Vehicles";
+import Planets from "./pages/Planets";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/films" component={Films} />
           <Route exact path="/starships" component={Starships} />
           <Route exact path="/vehicles" component={Vehicles} />
+          <Route exact path="/planets" component={Planets} />
         </Switch>
       </Layout>
     </BrowserRouter>

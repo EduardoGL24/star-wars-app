@@ -11,10 +11,12 @@ export const Cards = (props) => {
   const getIdInfo = (arg) => arg.replace(/\D/g, "");
 
   const handdleChange = (e) => {
+    console.log(e);
     let oldList = props.items.map((item) => {
       return {
         name: item.name,
         title: item.title,
+        id: getIdInfo(item.url),
       };
     });
     if (e !== "") {
@@ -44,7 +46,7 @@ export const Cards = (props) => {
             aria-label="Search"
           />
         </div>
-        <h1>No hay resultados, prro</h1>
+        <h1>No hay resultados</h1>
       </div>
     );
   }
@@ -69,10 +71,10 @@ export const Cards = (props) => {
               alt={item.name}
             />
             <div className="card-body">
-              <h5 className="card-title">{item.name}</h5>
+              <h5 className="card-title">{item.name || item.title}</h5>
               <Link
                 className="btn btn-outline-primary btn-block"
-                to={`${props.folder}/${getIdInfo(item.url)}`}
+                to={`${props.folder}/${item.id || getIdInfo(item.url)}`}
               >
                 Ver más
               </Link>

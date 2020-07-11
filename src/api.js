@@ -40,6 +40,9 @@ const api = {
     getInfoNames(endpoint, ids) {
       return getAllItems(endpoint, ids);
     },
+    getPlanetInfo(id) {
+      return callApi(`planets/${id}`);
+    },
   },
 };
 

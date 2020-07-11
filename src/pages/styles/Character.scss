@@ -12,9 +12,35 @@
     padding: 15px 30px;
     background-color: #FFF;
     border-radius: 15px;
-    img{
-      width: 100px;
-      height: 150px;
+    .character-info-box{
+      .character-image-container{
+        display: inline-block;
+        text-align:  center;
+        padding-right: 10px;
+        img{
+          width: 150px;
+          height: 200px;
+          margin: 0 auto;
+        }
+        .image-planet{
+          width: 100%;
+          height: auto;
+        }
+        p{
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px){
+  .container-character-image{
+    padding: 25px 0px;
+  }
+  .character-info{
+    text-align: center;
+    .character-info-box{
+      padding: 10px 0px;
     }
   }
 }

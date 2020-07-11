@@ -101,11 +101,13 @@ export class Character extends Component {
               {this.state.films.map((film, id) => {
                 return (
                   <div className="character-image-container">
-                    <img
-                      key={id}
-                      src={require(`../images/films/${film.title}.jpg`)}
-                      alt=""
-                    />
+                    <Link to={`/films/${this.getIdInfo(film.url)}`}>
+                      <img
+                        key={id}
+                        src={require(`../images/films/${film.title}.jpg`)}
+                        alt=""
+                      />
+                    </Link>
                     <p>{film.title}</p>
                   </div>
                 );
@@ -117,11 +119,15 @@ export class Character extends Component {
                 <p>Desconocido</p>
               ) : (
                 <div className="character-image-container">
-                  <img
-                    className="image-planet"
-                    src={require(`../images/planets/${this.state.homeworld.name}.jpg`)}
-                    alt=""
-                  />
+                  <Link
+                    to={`/planets/${this.getIdInfo(this.state.homeworld.url)}`}
+                  >
+                    <img
+                      className="image-planet"
+                      src={require(`../images/planets/${this.state.homeworld.name}.jpg`)}
+                      alt=""
+                    />
+                  </Link>
                   <p>{this.state.homeworld.name}</p>
                 </div>
               )}
@@ -134,11 +140,13 @@ export class Character extends Component {
                 this.state.starships.map((starship, id) => {
                   return (
                     <div className="character-image-container">
-                      <img
-                        key={id}
-                        src={require(`../images/starships/${starship.name}.jpg`)}
-                        alt=""
-                      />
+                      <Link to={`/starships/${this.getIdInfo(starship.url)}`}>
+                        <img
+                          key={id}
+                          src={require(`../images/starships/${starship.name}.jpg`)}
+                          alt=""
+                        />
+                      </Link>
                       <p>{starship.name}</p>
                     </div>
                   );
@@ -153,11 +161,13 @@ export class Character extends Component {
                 this.state.vehicles.map((vehicle, id) => {
                   return (
                     <div className="character-image-container">
-                      <img
-                        key={id}
-                        src={require(`../images/vehicles/${vehicle.name}.jpg`)}
-                        alt=""
-                      />
+                      <Link to={`/vehicles/${this.getIdInfo(vehicle.url)}`}>
+                        <img
+                          key={id}
+                          src={require(`../images/vehicles/${vehicle.name}.jpg`)}
+                          alt=""
+                        />
+                      </Link>
                       <p>{vehicle.name}</p>
                     </div>
                   );
@@ -165,7 +175,7 @@ export class Character extends Component {
               )}
             </div>
             <Link to="/characters" className="btn btn-primary mt-3">
-              Regresar
+              Personajes
             </Link>
           </div>
         </div>

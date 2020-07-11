@@ -43,6 +43,10 @@ const api = {
     getPlanetInfo(id) {
       return callApi(`planets/${id}`);
     },
+    getFilmInfo(id) {
+      console.log(id);
+      return callApi(`films/${id}`);
+    },
   },
 };
 

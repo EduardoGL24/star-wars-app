@@ -5,7 +5,8 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Characters from "./pages/Characters";
 import Character from "./pages/Character";
-import Starships from "./pages/starships";
+import Starships from "./pages/Starships";
+import Starship from "./pages/Starship";
 import Films from "./pages/Films";
 import Vehicles from "./pages/Vehicles";
 import Planets from "./pages/Planets";
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/films" component={Films} />
           <Route exact path="/films/:id" component={Film} />
           <Route exact path="/starships" component={Starships} />
+          <Route exact path="/starships/:id" component={Starship} />
           <Route exact path="/vehicles" component={Vehicles} />
           <Route exact path="/planets" component={Planets} />
         </Switch>

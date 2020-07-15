@@ -47,6 +47,10 @@ const api = {
       console.log(id);
       return callApi(`films/${id}`);
     },
+    getStarshipInfo(id) {
+      console.log(id);
+      return callApi(`starships/${id}`);
+    },
   },
 };
 

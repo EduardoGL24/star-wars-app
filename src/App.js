@@ -12,6 +12,7 @@ import Vehicles from "./pages/Vehicles";
 import Planets from "./pages/Planets";
 import Film from "./pages/Film";
 import Vehicle from "./pages/Vehicle";
+import Planet from "./pages/Planet";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route exact path="/vehicles" component={Vehicles} />
           <Route exact path="/vehicles/:id" component={Vehicle} />
           <Route exact path="/planets" component={Planets} />
+          <Route exact path="/planets/:id" component={Planet} />
         </Switch>
       </Layout>
     </BrowserRouter>

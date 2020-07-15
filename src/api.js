@@ -55,6 +55,10 @@ const api = {
       console.log(id);
       return callApi(`vehicles/${id}`);
     },
+    getPlanetInfo(id) {
+      console.log(id);
+      return callApi(`planets/${id}`);
+    },
   },
 };
 

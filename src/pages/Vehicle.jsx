@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import api from "../api";
 import Loader from "../components/Loader";
-import "./styles/Vehicle.scss";
+import "./styles/Starship.scss";
 
-export class Starship extends Component {
+export class Vehicle extends Component {
   state = {
     data: [],
     loader: true,
@@ -22,7 +22,7 @@ export class Starship extends Component {
     let id = this.getIdInfo(window.location.pathname);
     this.setState({ loading: true, error: false });
     try {
-      const data = await api.data.getStarshipInfo(id);
+      const data = await api.data.getVehicleInfo(id);
       const films = await api.data.getInfoNames("films", data.films);
       const characters = await api.data.getInfoNames("people", data.pilots);
       this.setState({
@@ -45,43 +45,43 @@ export class Starship extends Component {
   render() {
     if (this.state.loading === true) {
       return (
-        <div className="starship-container">
+        <div className="vehicle-container">
           <Loader />
         </div>
       );
     }
     return (
       <React.Fragment>
-        <div className="starship-container row">
-          <div className="container-starship-image col-lg-4 col-md-12">
+        <div className="vehicle-container row">
+          <div className="container-vehicle-image col-lg-4 col-md-12">
             <img
-              src={require(`../images/starships/${this.state.data.name}.jpg`)}
+              src={require(`../images/vehicles/${this.state.data.name}.jpg`)}
               alt={this.state.data.name}
             />
           </div>
-          <div className="container-starship-info col-lg-8 col-md-12">
+          <div className="container-vehicle-info col-lg-8 col-md-12">
             <h1>{this.state.data.name}</h1>
-            <div className="starship-info-box">
+            <div className="vehicle-info-box">
               <h4>Modelo:</h4>
               <p>{this.state.data.model}</p>
             </div>
-            <div className="starship-info-box">
+            <div className="vehicle-info-box">
               <h4>Clase:</h4>
-              <p>{this.state.data.starship_class}</p>
+              <p>{this.state.data.vehicle_class}</p>
             </div>
-            <div className="starship-info-box">
+            <div className="vehicle-info-box">
               <h4>Fabricante:</h4>
               <p>{this.state.data.manufacturer}</p>
             </div>
-            <div className="starship-info-box">
+            <div className="vehicle-info-box">
               <h4>Tripulación:</h4>
               <p>{this.state.data.crew}</p>
             </div>
-            <div className="starship-info-box">
+            <div className="vehicle-info-box">
               <h4>Pasajeros:</h4>
               <p>{this.state.data.passengers}</p>
             </div>
-            <div className="starship-info-box">
+            <div className="vehicle-info-box">
               <h4>Capacidad de carga:</h4>
               <p>
                 {this.state.data.cargo_capacity === "unknown"
@@ -89,11 +89,7 @@ export class Starship extends Component {
                   : this.numberFormat(this.state.data.cargo_capacity)}
               </p>
             </div>
-            <div className="starship-info-box">
-              <h4>Calificación de hiperimpulsor:</h4>
-              <p>{this.state.data.hyperdrive_rating}</p>
-            </div>
-            <div className="starship-info-box">
+            <div className="vehicle-info-box">
               <h4>Costo en créditos:</h4>
               <p>
                 {this.state.data.cost_in_credits === "unknown"
@@ -101,11 +97,11 @@ export class Starship extends Component {
                   : this.numberFormat(this.state.data.cost_in_credits)}
               </p>
             </div>
-            <div className="starship-info-box">
-              <h4>Velocidad máxima en la atmósfera:</h4>
+            <div className="vehicle-info-box">
+              <h4>Velocidad máxima:</h4>
               <p>{this.numberFormat(this.state.data.max_atmosphering_speed)}</p>
             </div>
-            <div className="starship-info-box">
+            <div className="vehicle-info-box">
               <h4>Suministros:</h4>
               <p>
                 {this.state.data.consumables === "unknown"
@@ -113,14 +109,14 @@ export class Starship extends Component {
                   : this.state.data.consumables}
               </p>
             </div>
-            <div className="starship-info-box">
+            <div className="vehicle-info-box">
               <h4>Pilotos:</h4>
               {this.state.characters.length === 0 ? (
                 <p>Sin Pilotos</p>
               ) : (
                 this.state.characters.map((character, id) => {
                   return (
-                    <div className="starship-image-container">
+                    <div className="vehicle-image-container">
                       <Link to={`/characters/${this.getIdInfo(character.url)}`}>
                         <img
                           key={id}
@@ -134,11 +130,11 @@ export class Starship extends Component {
                 })
               )}
             </div>
-            <div className="starship-info-box">
+            <div className="vehicle-info-box">
               <h4>Apariciones:</h4>
               {this.state.films.map((film, id) => {
                 return (
-                  <div className="starship-image-container">
+                  <div className="vehicle-image-container">
                     <Link to={`/films/${this.getIdInfo(film.url)}`}>
                       <img
                         key={id}
@@ -151,8 +147,8 @@ export class Starship extends Component {
                 );
               })}
             </div>
-            <Link to="/starships" className="btn btn-primary mt-3">
-              Naves
+            <Link to="/vehicles" className="btn btn-primary mt-3">
+              Vehiculos
             </Link>
           </div>
         </div>
@@ -161,4 +157,4 @@ export class Starship extends Component {
   }
 }
 
-export default Starship;
+export default Vehicle;

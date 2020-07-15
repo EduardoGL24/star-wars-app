@@ -51,6 +51,10 @@ const api = {
       console.log(id);
       return callApi(`starships/${id}`);
     },
+    getVehicleInfo(id) {
+      console.log(id);
+      return callApi(`vehicles/${id}`);
+    },
   },
 };
 

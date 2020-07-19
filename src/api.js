@@ -31,7 +31,6 @@ async function getAllItems(endpoint, ids) {
 const api = {
   data: {
     getData(endpoint) {
-      console.log(endpoint);
       return getAllData(endpoint);
     },
     getInfoCharacter(id) {
@@ -44,19 +43,15 @@ const api = {
       return callApi(`planets/${id}`);
     },
     getFilmInfo(id) {
-      console.log(id);
       return callApi(`films/${id}`);
     },
     getStarshipInfo(id) {
-      console.log(id);
       return callApi(`starships/${id}`);
     },
     getVehicleInfo(id) {
-      console.log(id);
       return callApi(`vehicles/${id}`);
     },
     getPlanetInfo(id) {
-      console.log(id);
       return callApi(`planets/${id}`);
     },
   },

@@ -45,7 +45,11 @@ export class Starships extends Component {
       return (
         <React.Fragment>
           <div className="starships-container">
-            <Cards items={this.state.items} folder="starships" />
+            <Cards
+              items={this.state.items}
+              folder="starships"
+              classCard="col-lg-4 col-md-6"
+            />
           </div>
         </React.Fragment>
       );

@@ -27,19 +27,19 @@ export class Home extends Component {
     return (
       <React.Fragment>
         <div className="home-container">
-          <div className="home-text-animation">
+          <div className="home-text-animation element-loaded">
             <h2>
               Conoce sobre <span className="clase"></span>
               <br /> de Star Wars
             </h2>
           </div>
-          <div className="home-text-description">
+          <div className="home-text-description element-loaded">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Molestias maiores sit, repellat sed harum officiis{" "}
             </p>
           </div>
-          <div className="home-button-container">
+          <div className="home-button-container element-loaded">
             <Link className="btn-home" to="characters">
               ¡Vamos!
             </Link>

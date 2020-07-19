@@ -41,11 +41,15 @@ export class Characters extends Component {
         </React.Fragment>
       );
     }
-    if (this.state.items.length > 0) {
+    if (this.state.items.length > 80) {
       return (
         <React.Fragment>
           <div className="characters-container">
-            <Cards items={this.state.items} folder="characters" />
+            <Cards
+              items={this.state.items}
+              folder="characters"
+              classCard="col-lg-3 col-md-4"
+            />
           </div>
         </React.Fragment>
       );

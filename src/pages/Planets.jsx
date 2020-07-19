@@ -45,7 +45,11 @@ export class Planets extends Component {
       return (
         <React.Fragment>
           <div className="planets-container">
-            <Cards items={this.state.items} folder="planets" />
+            <Cards
+              items={this.state.items}
+              folder="planets"
+              classCard="col-lg-4 col-md-6"
+            />
           </div>
         </React.Fragment>
       );

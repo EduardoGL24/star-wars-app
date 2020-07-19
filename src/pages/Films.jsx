@@ -45,7 +45,11 @@ export class Films extends Component {
       return (
         <React.Fragment>
           <div className="films-container">
-            <Cards items={this.state.items} folder="films" />
+            <Cards
+              items={this.state.items}
+              folder="films"
+              classCard="col-lg-3 col-md-4"
+            />
           </div>
         </React.Fragment>
       );

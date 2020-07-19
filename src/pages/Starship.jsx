@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { Cards } from "../components/Cards";
 import api from "../api";
 import Loader from "../components/Loader";
 import "./styles/Vehicle.scss";
@@ -53,13 +54,13 @@ export class Starship extends Component {
     return (
       <React.Fragment>
         <div className="starship-container row">
-          <div className="container-starship-image col-lg-4 col-md-12">
+          <div className="container-starship-image col-lg-4 col-md-12 element-loaded">
             <img
               src={require(`../images/starships/${this.state.data.name}.jpg`)}
               alt={this.state.data.name}
             />
           </div>
-          <div className="container-starship-info col-lg-8 col-md-12">
+          <div className="container-starship-info col-lg-8 col-md-12 element-loaded">
             <h1>{this.state.data.name}</h1>
             <div className="starship-info-box">
               <h4>Modelo:</h4>
@@ -118,38 +119,22 @@ export class Starship extends Component {
               {this.state.characters.length === 0 ? (
                 <p>Sin Pilotos</p>
               ) : (
-                this.state.characters.map((character, id) => {
-                  return (
-                    <div className="starship-image-container">
-                      <Link to={`/characters/${this.getIdInfo(character.url)}`}>
-                        <img
-                          key={id}
-                          src={require(`../images/characters/${character.name}.jpg`)}
-                          alt=""
-                        />
-                      </Link>
-                      <p>{character.name}</p>
-                    </div>
-                  );
-                })
+                <Cards
+                  items={this.state.characters}
+                  folder="characters"
+                  classCard="col-lg-3 col-md-4"
+                  moreInfo={true}
+                />
               )}
             </div>
             <div className="starship-info-box">
               <h4>Apariciones:</h4>
-              {this.state.films.map((film, id) => {
-                return (
-                  <div className="starship-image-container">
-                    <Link to={`/films/${this.getIdInfo(film.url)}`}>
-                      <img
-                        key={id}
-                        src={require(`../images/films/${film.title}.jpg`)}
-                        alt=""
-                      />
-                    </Link>
-                    <p>{film.title}</p>
-                  </div>
-                );
-              })}
+              <Cards
+                items={this.state.films}
+                folder="films"
+                classCard="col-lg-3 col-md-4"
+                moreInfo={true}
+              />
             </div>
             <Link to="/starships" className="btn btn-primary mt-3">
               Naves

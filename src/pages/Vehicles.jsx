@@ -45,7 +45,11 @@ export class Vehicles extends Component {
       return (
         <React.Fragment>
           <div className="vehicles-container">
-            <Cards items={this.state.items} folder="vehicles" />
+            <Cards
+              items={this.state.items}
+              folder="vehicles"
+              classCard="col-lg-4 col-md-6"
+            />
           </div>
         </React.Fragment>
       );

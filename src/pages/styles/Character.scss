@@ -12,25 +12,6 @@
     padding: 15px 30px;
     background-color: #FFF;
     border-radius: 15px;
-    .character-info-box{
-      .character-image-container{
-        display: inline-block;
-        text-align:  center;
-        padding-right: 10px;
-        img{
-          width: 150px;
-          height: 200px;
-          margin: 0 auto;
-        }
-        .image-planet{
-          max-width: 100%;
-          height: auto;
-        }
-        p{
-          margin-top: 10px;
-        }
-      }
-    }
   }
 }
 @media screen and (max-width: 991px){

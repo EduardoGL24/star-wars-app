@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { Cards } from "../components/Cards";
 import api from "../api";
 import Loader from "../components/Loader";
 import "./styles/Film.scss";
@@ -35,8 +36,6 @@ export class Film extends Component {
       const vehicles = await api.data.getInfoNames("vehicles", data.vehicles);
       const species = await api.data.getInfoNames("species", data.species);
 
-      console.log(vehicles);
-      console.log(data);
       this.setState({
         data: data,
         loading: false,
@@ -47,7 +46,6 @@ export class Film extends Component {
         vehicles: vehicles,
         species: species,
       });
-      console.log(this.state.vehicle);
     } catch (err) {
       console.log(err);
       this.setState({ loading: false, error: true });
@@ -67,13 +65,13 @@ export class Film extends Component {
     return (
       <React.Fragment>
         <div className="film-container row">
-          <div className="container-film-image col-lg-4 col-md-12">
+          <div className="container-film-image col-lg-4 col-md-12 element-loaded">
             <img
               src={require(`../images/films/${this.state.data.title}.jpg`)}
               alt={this.state.data.title}
             />
           </div>
-          <div className="container-film-info col-lg-8 col-md-12">
+          <div className="container-film-info col-lg-8 col-md-12 element-loaded">
             <h1>{this.state.data.title}</h1>
             <div className="film-info-box">
               <h4>Episodio:</h4>
@@ -93,77 +91,45 @@ export class Film extends Component {
             </div>
             <div className="film-info-box">
               <h4>Personajes:</h4>
-              {this.state.characters.map((character, id) => {
-                return (
-                  <div className="film-image-container">
-                    <Link to={`/characters/${this.getIdInfo(character.url)}`}>
-                      <img
-                        key={id}
-                        src={require(`../images/characters/${character.name}.jpg`)}
-                        alt=""
-                      />
-                    </Link>
-                    <p>{character.name}</p>
-                  </div>
-                );
-              })}
+              <Cards
+                items={this.state.characters}
+                folder="characters"
+                classCard="col-lg-3 col-md-4"
+                moreInfo={true}
+              />
             </div>
             <div className="film-info-box">
               <h4>Planetas:</h4>
-              {this.state.planets.map((planet, id) => {
-                return (
-                  <div className="film-image-container">
-                    <Link to={`/planets/${this.getIdInfo(planet.url)}`}>
-                      <img
-                        key={id}
-                        src={require(`../images/planets/${planet.name}.jpg`)}
-                        alt=""
-                      />
-                    </Link>
-                    <p>{planet.name}</p>
-                  </div>
-                );
-              })}
+              <Cards
+                items={this.state.planets}
+                folder="planets"
+                classCard="col-lg-3 col-md-4"
+                moreInfo={true}
+              />
             </div>
             <div className="film-info-box">
               <h4>Naves:</h4>
-              {this.state.starships.map((starship, id) => {
-                return (
-                  <div className="film-image-container">
-                    <Link to={`/starships/${this.getIdInfo(starship.url)}`}>
-                      <img
-                        key={id}
-                        src={require(`../images/starships/${starship.name}.jpg`)}
-                        alt=""
-                      />
-                    </Link>
-                    <p>{starship.name}</p>
-                  </div>
-                );
-              })}
+              <Cards
+                items={this.state.starships}
+                folder="starships"
+                classCard="col-lg-3 col-md-4"
+                moreInfo={true}
+              />
             </div>
             <div className="film-info-box">
               <h4>Vehiculos</h4>
-              {this.state.vehicles.map((vehicle, id) => {
-                return (
-                  <div className="film-image-container">
-                    <Link to={`/vehicles/${this.getIdInfo(vehicle.url)}`}>
-                      <img
-                        key={id}
-                        src={require(`../images/vehicles/${vehicle.name}.jpg`)}
-                        alt=""
-                      />
-                    </Link>
-                    <p>{vehicle.name}</p>
-                  </div>
-                );
-              })}
+              <Cards
+                items={this.state.vehicles}
+                folder="vehicles"
+                classCard="col-lg-3 col-md-4"
+                moreInfo={true}
+              />
             </div>
             <div className="film-info-box">
               <h4>Especies:</h4>
               <ul>
-                {this.state.species.map((specie, id) => {
-                  return <li key={id}>{specie.name}</li>;
+                {this.state.species.map((specie, i) => {
+                  return <li key={i}>{specie.name}</li>;
                 })}
               </ul>
             </div>

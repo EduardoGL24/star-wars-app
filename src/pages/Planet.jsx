@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { Cards } from "../components/Cards";
 import api from "../api";
 import Loader from "../components/Loader";
 import "./styles/Planet.scss";
@@ -112,22 +113,14 @@ export class Planet extends Component {
             <div className="planet-info-box">
               <h4>Residentes:</h4>
               {this.state.characters.length === 0 ? (
-                <p>Sin Pilotos</p>
+                <p>Desconocidos</p>
               ) : (
-                this.state.characters.map((character, id) => {
-                  return (
-                    <div className="planet-image-container">
-                      <Link to={`/characters/${this.getIdInfo(character.url)}`}>
-                        <img
-                          key={id}
-                          src={require(`../images/characters/${character.name}.jpg`)}
-                          alt=""
-                        />
-                      </Link>
-                      <p>{character.name}</p>
-                    </div>
-                  );
-                })
+                <Cards
+                  items={this.state.characters}
+                  folder="characters"
+                  classCard="col-lg-3 col-md-4"
+                  moreInfo={true}
+                />
               )}
             </div>
             <div className="planet-info-box">
@@ -135,20 +128,12 @@ export class Planet extends Component {
               {this.state.films.length === 0 ? (
                 <p>En ninguna pelicula</p>
               ) : (
-                this.state.films.map((film, id) => {
-                  return (
-                    <div className="planet-image-container">
-                      <Link to={`/films/${this.getIdInfo(film.url)}`}>
-                        <img
-                          key={id}
-                          src={require(`../images/films/${film.title}.jpg`)}
-                          alt=""
-                        />
-                      </Link>
-                      <p>{film.title}</p>
-                    </div>
-                  );
-                })
+                <Cards
+                  items={this.state.films}
+                  folder="films"
+                  classCard="col-lg-3 col-md-4"
+                  moreInfo={true}
+                />
               )}
             </div>
             <Link to="/planets" className="btn btn-primary mt-3">

@@ -6,7 +6,6 @@ export class Navbar extends Component {
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
   }
-
   handleScroll() {
     const navbar = document.getElementById("navbar-fixed");
     if (window.pageYOffset > 0) {
@@ -15,11 +14,16 @@ export class Navbar extends Component {
       navbar.classList.remove("navbar-color");
     }
   }
+  handleClick = () => {
+    const menu = document.getElementById("navbar-responsive");
+    menu.classList.toggle("menu-animate");
+    menu.classList.toggle("menu-visible");
+  };
   render() {
     return (
       <React.Fragment>
         <nav className="navbar fixed-top row no-margin" id="navbar-fixed">
-          <div className="col-md-2">
+          <div className="col-md-2 col-sm-5 navbar-container-image">
             <Link to="/" className="navbar-brand" href="#">
               <img
                 src={require("../images/logo.png")}
@@ -30,8 +34,23 @@ export class Navbar extends Component {
               />
             </Link>
           </div>
-          <div className="col-md-10 navbar-container-items">
-            <ul className="navbar-list">
+          <div
+            className="col-md-10 col-sm-7 navbar-container-items"
+            id="container-menu"
+          >
+            <div
+              onClick={this.handleClick}
+              className="navbar-container-responsive"
+            >
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <ul
+              className="navbar-list"
+              id="navbar-responsive"
+              onClick={this.handleClick}
+            >
               <li className="navbar-item">
                 <Link to="/" className="nav-link" href="#">
                   Home

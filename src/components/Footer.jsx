@@ -5,8 +5,8 @@ export class Footer extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="footer-container">
-          <div className="">
+        <div className="footer-container row">
+          <div className="col-xs-12 col-md-6">
             <h4>Tecnologías</h4>
             <div className="footer-items-container">
               <div className="footer-item">
@@ -27,7 +27,7 @@ export class Footer extends Component {
               </div>
             </div>
           </div>
-          <div className="footer-contact-container">
+          <div className="footer-contact-container col-xs-12 col-md-6">
             <h4>Contacto</h4>
             <div className="contact-item-container">
               <img src={require("../images/whatsapp.png")} alt="" />

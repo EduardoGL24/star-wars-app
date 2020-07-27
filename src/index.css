@@ -1,59 +1,79 @@
 /* fonts */
-@font-face{
-  font-family: 'QuickSand';
+@font-face {
+  font-family: "QuickSand";
   font-weight: normal;
-  src: local('QuickSand'), url(./fonts/Quicksand-Regular.ttf) format('truetype');
+  src: local("QuickSand"), url(./fonts/Quicksand-Regular.ttf) format("truetype");
 }
-@font-face{
-  font-family: 'QuickSand';
+@font-face {
+  font-family: "QuickSand";
   font-weight: bold;
-  src: local('QuickSand'), url(./fonts/Quicksand-Bold.ttf) format('truetype');
+  src: local("QuickSand"), url(./fonts/Quicksand-Bold.ttf) format("truetype");
 }
-@font-face{
-  font-family: 'QuickSand';
+@font-face {
+  font-family: "QuickSand";
   font-weight: light;
-  src: local('QuickSand'), url(./fonts/Quicksand-Light.ttf) format('truetype');
+  src: local("QuickSand"), url(./fonts/Quicksand-Light.ttf) format("truetype");
 }
-@font-face{
-  font-family: 'QuickSand';
+@font-face {
+  font-family: "QuickSand";
   font-weight: medium;
-  src: local('QuickSand'), url(./fonts/Quicksand-Medium.ttf) format('truetype');
+  src: local("QuickSand"), url(./fonts/Quicksand-Medium.ttf) format("truetype");
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
 }
-body{
-  font-family: 'Quicksand', sans-serif !important;
+body {
+  font-family: "Quicksand", sans-serif !important;
   box-sizing: border-box;
 }
-.no-margin{
+.no-margin {
   margin: 0px !important;
 }
-.no-padding{
+.no-padding {
   margin: 0px !important;
 }
-.btn{
+.btn {
   text-transform: uppercase;
 }
-.row{
+.row {
   margin: 0px !important;
 }
-.element-loading{
+.element-loading {
   opacity: 0;
 }
 /* Animations */
 
-@keyframes fadeInImg{
-  from {opacity: 0;}
-  to {opacity: 1;}
- }
-.element-loaded{
-   animation: fadeInImg cubic-bezier(0.23, 1, 0.32, 1) 1;
-   position: relative;
-   opacity: 0;
-   animation-fill-mode: forwards;
-   animation-duration: 0.7s;
-   animation-delay: 0.1s;
- }
+@keyframes fadeInImg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.element-loaded {
+  animation: fadeInImg cubic-bezier(0.23, 1, 0.32, 1) 1;
+  position: relative;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 0.7s;
+  animation-delay: 0.1s;
+}
+
+@media screen and (max-width: 425px) {
+  .home-container,
+  .character-container,
+  .characters-container,
+  .film-container,
+  .films-container,
+  .planet-container,
+  .planets-container,
+  .starship-container,
+  .starships-container,
+  .vehicle-container,
+  .vehicles-container {
+    padding: 100px 10% !important;
+  }
+}

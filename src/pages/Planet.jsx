@@ -63,57 +63,57 @@ export class Planet extends Component {
           <div className="container-planet-info col-lg-7 col-md-12">
             <h1>{this.state.data.name}</h1>
             <div className="planet-info-box">
-              <h4>Período de rotación:</h4>
+              <h4>Rotation Period:</h4>
               <p>
                 {this.state.data.rotation_period === "unknown"
-                  ? "Desconocido"
-                  : this.state.data.rotation_period + " horas"}
+                  ? "Unknown"
+                  : this.state.data.rotation_period + " hours"}
               </p>
             </div>
             <div className="planet-info-box">
-              <h4>Período de orbita:</h4>
+              <h4>Orbital Period:</h4>
               <p>
                 {this.state.data.orbital_period === "unknown"
-                  ? "Desconocido"
-                  : this.state.data.orbital_period + " dias"}
+                  ? "Unknown"
+                  : this.state.data.orbital_period + " days"}
               </p>
             </div>
             <div className="planet-info-box">
-              <h4>Diámetro:</h4>
+              <h4>Diameter:</h4>
               <p>
                 {this.state.data.diameter === "unknown"
-                  ? "Desconocido"
+                  ? "Unknown"
                   : this.numberFormat(this.state.data.diameter) + " Km"}
               </p>
             </div>
             <div className="planet-info-box">
-              <h4>Clima:</h4>
+              <h4>Climate:</h4>
               <p>
                 {this.state.data.climate === "unknown"
-                  ? "Desconocido"
+                  ? "Unknown"
                   : this.state.data.climate}
               </p>
             </div>
             <div className="planet-info-box">
-              <h4>Gravedad:</h4>
+              <h4>Gravity:</h4>
               <p>
                 {this.state.data.gravity === "unknown"
-                  ? "Desconocida"
+                  ? "Unknown"
                   : this.state.data.gravity}
               </p>
             </div>
             <div className="planet-info-box">
-              <h4>Población:</h4>
+              <h4>Population:</h4>
               <p>
                 {this.state.data.population === "unknown"
-                  ? "Desconocida"
+                  ? "Unknown"
                   : this.numberFormat(this.state.data.population)}
               </p>
             </div>
             <div className="planet-info-box">
-              <h4>Residentes:</h4>
+              <h4>Residents:</h4>
               {this.state.characters.length === 0 ? (
-                <p>Desconocidos</p>
+                <p>Unknown</p>
               ) : (
                 <Cards
                   items={this.state.characters}
@@ -124,9 +124,9 @@ export class Planet extends Component {
               )}
             </div>
             <div className="planet-info-box">
-              <h4>Apariciones:</h4>
+              <h4>Films:</h4>
               {this.state.films.length === 0 ? (
-                <p>En ninguna pelicula</p>
+                <p>None</p>
               ) : (
                 <Cards
                   items={this.state.films}
@@ -137,7 +137,7 @@ export class Planet extends Component {
               )}
             </div>
             <Link to="/planets" className="btn btn-primary mt-3">
-              Planetas
+              Planets
             </Link>
           </div>
         </div>

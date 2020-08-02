@@ -63,27 +63,27 @@ export class Starship extends Component {
           <div className="container-starship-info col-lg-8 col-md-12 element-loaded">
             <h1>{this.state.data.name}</h1>
             <div className="starship-info-box">
-              <h4>Modelo:</h4>
+              <h4>Model:</h4>
               <p>{this.state.data.model}</p>
             </div>
             <div className="starship-info-box">
-              <h4>Clase:</h4>
+              <h4>Starship Class:</h4>
               <p>{this.state.data.starship_class}</p>
             </div>
             <div className="starship-info-box">
-              <h4>Fabricante:</h4>
+              <h4>Manufacturer:</h4>
               <p>{this.state.data.manufacturer}</p>
             </div>
             <div className="starship-info-box">
-              <h4>Tripulación:</h4>
+              <h4>Crew:</h4>
               <p>{this.state.data.crew}</p>
             </div>
             <div className="starship-info-box">
-              <h4>Pasajeros:</h4>
+              <h4>Passengers:</h4>
               <p>{this.state.data.passengers}</p>
             </div>
             <div className="starship-info-box">
-              <h4>Capacidad de carga:</h4>
+              <h4>Cargo Capacity:</h4>
               <p>
                 {this.state.data.cargo_capacity === "unknown"
                   ? "Desconocida"
@@ -91,11 +91,11 @@ export class Starship extends Component {
               </p>
             </div>
             <div className="starship-info-box">
-              <h4>Calificación de hiperimpulsor:</h4>
+              <h4>Rating Hyperdrive:</h4>
               <p>{this.state.data.hyperdrive_rating}</p>
             </div>
             <div className="starship-info-box">
-              <h4>Costo en créditos:</h4>
+              <h4>Cost in credits:</h4>
               <p>
                 {this.state.data.cost_in_credits === "unknown"
                   ? "Desconocido"
@@ -103,21 +103,21 @@ export class Starship extends Component {
               </p>
             </div>
             <div className="starship-info-box">
-              <h4>Velocidad máxima en la atmósfera:</h4>
+              <h4>Max Atmosphering Speed:</h4>
               <p>{this.numberFormat(this.state.data.max_atmosphering_speed)}</p>
             </div>
             <div className="starship-info-box">
-              <h4>Suministros:</h4>
+              <h4>Consumables:</h4>
               <p>
                 {this.state.data.consumables === "unknown"
-                  ? "Desconocidos"
+                  ? "Unknown"
                   : this.state.data.consumables}
               </p>
             </div>
             <div className="starship-info-box">
-              <h4>Pilotos:</h4>
+              <h4>Pilots:</h4>
               {this.state.characters.length === 0 ? (
-                <p>Sin Pilotos</p>
+                <p>Without Pilots</p>
               ) : (
                 <Cards
                   items={this.state.characters}
@@ -128,7 +128,7 @@ export class Starship extends Component {
               )}
             </div>
             <div className="starship-info-box">
-              <h4>Apariciones:</h4>
+              <h4>Films:</h4>
               <Cards
                 items={this.state.films}
                 folder="films"
@@ -137,7 +137,7 @@ export class Starship extends Component {
               />
             </div>
             <Link to="/starships" className="btn btn-primary mt-3">
-              Naves
+              Starships
             </Link>
           </div>
         </div>

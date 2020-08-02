@@ -73,31 +73,31 @@ export class Character extends Component {
           <div className="character-info col-lg-8 col-md-12 element-loaded">
             <h1>{this.state.data.name}</h1>
             <div className="character-info-box">
-              <h4>Altura:</h4>
+              <h4>Height:</h4>
               <p>
                 {this.state.data.height === "unknown"
-                  ? "Desconocido"
+                  ? "Unknow"
                   : this.state.data.height + " cm"}
               </p>
             </div>
             <div className="character-info-box">
-              <h4>Peso:</h4>
+              <h4>Mass:</h4>
               <p>
                 {this.state.data.mass === "unknown"
-                  ? "Desconocido"
+                  ? "Unknow"
                   : this.state.data.mass + " Kg"}
               </p>
             </div>
             {this.state.species.map((specie, i) => {
               return (
                 <div className="character-info-box">
-                  <h4>Especie:</h4>
+                  <h4>Specie:</h4>
                   <p key={i}>{specie.name}</p>
                 </div>
               );
             })}
             <div className="character-info-box">
-              <h4>Apariciones:</h4>
+              <h4>Films:</h4>
               <Cards
                 items={this.state.films}
                 folder="films"
@@ -106,9 +106,9 @@ export class Character extends Component {
               />
             </div>
             <div className="character-info-box">
-              <h4>Planeta:</h4>
+              <h4>Planet:</h4>
               {this.state.homeworld.length === 0 ? (
-                <p>Desconocido</p>
+                <p>Unknow</p>
               ) : (
                 <div className="character-image-container">
                   <Link
@@ -125,9 +125,9 @@ export class Character extends Component {
               )}
             </div>
             <div className="character-info-box">
-              <h4>Naves:</h4>
+              <h4>Starships:</h4>
               {this.state.starships.length === 0 ? (
-                <p>Sin naves</p>
+                <p>Without starships</p>
               ) : (
                 <Cards
                   items={this.state.starships}
@@ -138,9 +138,9 @@ export class Character extends Component {
               )}
             </div>
             <div className="character-info-box">
-              <h4>Vehiculos:</h4>
+              <h4>Vehicles:</h4>
               {this.state.vehicles.length === 0 ? (
-                <p>Sin Vehiculos</p>
+                <p>Without Vehicles</p>
               ) : (
                 <Cards
                   items={this.state.vehicles}
@@ -151,7 +151,7 @@ export class Character extends Component {
               )}
             </div>
             <Link to="/characters" className="btn btn-primary mt-3">
-              Personajes
+              Characters
             </Link>
           </div>
         </div>

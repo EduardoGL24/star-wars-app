@@ -5,6 +5,9 @@ $menu-items: 6;
   width: 100%;
   background-color: transparent;
   height: 75px;
+  .navbar-container-image {
+    height: 100%;
+  }
 }
 .navbar-color {
   background-color: #ffe81f !important;

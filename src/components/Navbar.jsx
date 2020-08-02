@@ -23,7 +23,7 @@ export class Navbar extends Component {
     return (
       <React.Fragment>
         <nav className="navbar fixed-top row no-margin" id="navbar-fixed">
-          <div className="col-md-2 col-sm-5 navbar-container-image">
+          <div className="col-md-3 col-sm-5 navbar-container-image">
             <Link to="/" className="navbar-brand" href="#">
               <img
                 src={require("../images/logo.png")}
@@ -35,7 +35,7 @@ export class Navbar extends Component {
             </Link>
           </div>
           <div
-            className="col-md-10 col-sm-7 navbar-container-items"
+            className="col-md-9 col-sm-7 navbar-container-items"
             id="container-menu"
           >
             <div
@@ -59,7 +59,7 @@ export class Navbar extends Component {
               </li>
               <li className="navbar-item">
                 <Link to="/characters" className="nav-link" href="#">
-                  Personajes
+                  Characters
                 </Link>
                 <img
                   className="navbar-item-lightsaber"
@@ -69,7 +69,7 @@ export class Navbar extends Component {
               </li>
               <li className="navbar-item">
                 <Link to="/films" className="nav-link" href="#">
-                  Peliculas
+                  Films
                 </Link>
                 <img
                   className="navbar-item-lightsaber"
@@ -79,7 +79,7 @@ export class Navbar extends Component {
               </li>
               <li className="navbar-item">
                 <Link to="/starships" className="nav-link" href="#">
-                  Naves
+                  Starships
                 </Link>
                 <img
                   className="navbar-item-lightsaber"
@@ -89,7 +89,7 @@ export class Navbar extends Component {
               </li>
               <li className="navbar-item">
                 <Link to="/vehicles" className="nav-link" href="#">
-                  Vehiculos
+                  Vehicles
                 </Link>
                 <img
                   className="navbar-item-lightsaber"
@@ -99,7 +99,7 @@ export class Navbar extends Component {
               </li>
               <li className="navbar-item">
                 <Link to="/planets" className="nav-link" href="#">
-                  Planetas
+                  Planets
                 </Link>
                 <img
                   className="navbar-item-lightsaber"
@@ -121,27 +121,27 @@ export class Navbar extends Component {
               </li>
               <li className="navbar-item">
                 <Link to="/characters" className="nav-link" href="#">
-                  Personajes
+                  Characters
                 </Link>
               </li>
               <li className="navbar-item">
                 <Link to="/films" className="nav-link" href="#">
-                  Peliculas
+                  Films
                 </Link>
               </li>
               <li className="navbar-item">
                 <Link to="/starships" className="nav-link" href="#">
-                  Naves
+                  Starships
                 </Link>
               </li>
               <li className="navbar-item">
                 <Link to="/vehicles" className="nav-link" href="#">
-                  Vehiculos
+                  Vehicles
                 </Link>
               </li>
               <li className="navbar-item">
                 <Link to="/planets" className="nav-link" href="#">
-                  Planetas
+                  Planets
                 </Link>
               </li>
             </ul>

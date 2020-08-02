@@ -8,12 +8,11 @@ export class Home extends Component {
     window.scrollTo(0, 0);
     new Typed(".clase", {
       strings: [
-        '<i className="text-animated">personajes</i>',
-        '<i className="text-animated">peliculas</i>',
-        '<i className="text-animated">naves</i>',
-        '<i className="text-animated">vehiculos</i>',
-        '<i className="text-animated">especies</i>',
-        '<i className="text-animated">planetas</i>',
+        '<i className="text-animated">characters</i>',
+        '<i className="text-animated">films</i>',
+        '<i className="text-animated">starships</i>',
+        '<i className="text-animated">vehicles</i>',
+        '<i className="text-animated">planets</i>',
       ],
       typeSpeed: 75,
       startDelay: 300,
@@ -29,8 +28,9 @@ export class Home extends Component {
         <div className="home-container">
           <div className="home-text-animation element-loaded">
             <h2>
-              Conoce sobre <span className="clase"></span>
-              <br /> de Star Wars
+              Know about star wars
+              <br />
+              <span className="clase"></span>
             </h2>
           </div>
           <div className="home-text-description element-loaded">
@@ -41,7 +41,7 @@ export class Home extends Component {
           </div>
           <div className="home-button-container element-loaded">
             <Link className="btn-home" to="characters">
-              ¡Vamos!
+              let's go!
             </Link>
           </div>
         </div>

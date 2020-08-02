@@ -74,15 +74,15 @@ export class Film extends Component {
           <div className="container-film-info col-lg-8 col-md-12 element-loaded">
             <h1>{this.state.data.title}</h1>
             <div className="film-info-box">
-              <h4>Episodio:</h4>
+              <h4>Episode:</h4>
               <p>{this.state.data.episode_id}</p>
             </div>
             <div className="film-info-box">
-              <h4>Fecha de lanzamiento:</h4>
+              <h4>Release Date:</h4>
               <p>{this.state.data.release_date}</p>
             </div>
             <div className="film-info-box">
-              <h4>Productor:</h4>
+              <h4>Producer:</h4>
               <p>{this.state.data.producer}</p>
             </div>
             <div className="film-info-box">
@@ -90,7 +90,7 @@ export class Film extends Component {
               <p>{this.state.data.opening_crawl}</p>
             </div>
             <div className="film-info-box">
-              <h4>Personajes:</h4>
+              <h4>Characters:</h4>
               <Cards
                 items={this.state.characters}
                 folder="characters"
@@ -99,7 +99,7 @@ export class Film extends Component {
               />
             </div>
             <div className="film-info-box">
-              <h4>Planetas:</h4>
+              <h4>Planets:</h4>
               <Cards
                 items={this.state.planets}
                 folder="planets"
@@ -108,7 +108,7 @@ export class Film extends Component {
               />
             </div>
             <div className="film-info-box">
-              <h4>Naves:</h4>
+              <h4>Starships:</h4>
               <Cards
                 items={this.state.starships}
                 folder="starships"
@@ -117,7 +117,7 @@ export class Film extends Component {
               />
             </div>
             <div className="film-info-box">
-              <h4>Vehiculos</h4>
+              <h4>Vehicles</h4>
               <Cards
                 items={this.state.vehicles}
                 folder="vehicles"
@@ -126,7 +126,7 @@ export class Film extends Component {
               />
             </div>
             <div className="film-info-box">
-              <h4>Especies:</h4>
+              <h4>Species:</h4>
               <ul>
                 {this.state.species.map((specie, i) => {
                   return <li key={i}>{specie.name}</li>;
@@ -134,7 +134,7 @@ export class Film extends Component {
               </ul>
             </div>
             <Link to="/films" className="btn btn-primary mt-3">
-              Peliculas
+              Films
             </Link>
           </div>
         </div>

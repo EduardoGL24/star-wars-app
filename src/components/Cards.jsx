@@ -47,7 +47,7 @@ export const Cards = (props) => {
             aria-label="Search"
           />
         </div>
-        <h1 className="not-found">No hay resultados</h1>
+        <h1 className="not-found">Not founded</h1>
       </div>
     );
   }
@@ -92,7 +92,7 @@ export const Cards = (props) => {
             onChange={(e) => handdleChange(e.target.value)}
             className="form-control"
             type="text"
-            placeholder="Buscar"
+            placeholder="Search"
           />
         </div>
         <div className="row">
@@ -123,7 +123,7 @@ export const Cards = (props) => {
                     className="btn btn-outline-primary btn-block"
                     to={`${props.folder}/${item.id || getIdInfo(item.url)}`}
                   >
-                    Ver más
+                    View
                   </Link>
                 </div>
               </div>

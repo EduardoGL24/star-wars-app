@@ -60,8 +60,14 @@
   }
 }
 
+@media screen and (max-width: 425px) {
+  .home-container {
+    background-image: url("../../images/home-v.jpg");
+  }
+}
 @media screen and (max-width: 374px) {
   .home-container {
+    background-image: url("../../images/home-v.jpg");
     .home-text-animation {
       height: 300px;
     }

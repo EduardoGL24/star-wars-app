@@ -2,6 +2,7 @@ $delay: 0.1s;
 $menu-items: 6;
 
 .navbar {
+  width: 100%;
   background-color: transparent;
   height: 75px;
 }
@@ -35,6 +36,9 @@ $menu-items: 6;
         opacity: 1;
       }
     }
+  }
+  .navbar-list-responsive {
+    display: none;
   }
   .navbar-container-responsive {
     width: 50px;
@@ -104,7 +108,8 @@ $menu-items: 6;
     text-align: right;
     width: 55% !important;
     display: inline-block;
-    .navbar-list {
+    .navbar-list,
+    .navbar-list-responsive {
       position: fixed;
       display: none;
       top: 75px;

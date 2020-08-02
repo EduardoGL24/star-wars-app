@@ -46,11 +46,7 @@ export class Navbar extends Component {
               <div></div>
               <div></div>
             </div>
-            <ul
-              className="navbar-list"
-              id="navbar-responsive"
-              onClick={this.handleClick}
-            >
+            <ul className="navbar-list">
               <li className="navbar-item">
                 <Link to="/" className="nav-link" href="#">
                   Home
@@ -110,6 +106,43 @@ export class Navbar extends Component {
                   src={require("../images/sable.png")}
                   alt=""
                 />
+              </li>
+            </ul>
+
+            <ul
+              className="navbar-list-responsive"
+              id="navbar-responsive"
+              onClick={this.handleClick}
+            >
+              <li className="navbar-item">
+                <Link to="/" className="nav-link" href="#">
+                  Home
+                </Link>
+              </li>
+              <li className="navbar-item">
+                <Link to="/characters" className="nav-link" href="#">
+                  Personajes
+                </Link>
+              </li>
+              <li className="navbar-item">
+                <Link to="/films" className="nav-link" href="#">
+                  Peliculas
+                </Link>
+              </li>
+              <li className="navbar-item">
+                <Link to="/starships" className="nav-link" href="#">
+                  Naves
+                </Link>
+              </li>
+              <li className="navbar-item">
+                <Link to="/vehicles" className="nav-link" href="#">
+                  Vehiculos
+                </Link>
+              </li>
+              <li className="navbar-item">
+                <Link to="/planets" className="nav-link" href="#">
+                  Planetas
+                </Link>
               </li>
             </ul>
           </div>

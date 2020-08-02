@@ -38,7 +38,7 @@ export const Cards = (props) => {
   if (filterDisplay.length === 0) {
     return (
       <div>
-        <div className="characters-search-bar mb-5">
+        <div className="cards-search-bar mb-5">
           <input
             onChange={(e) => handdleChange(e.target.value)}
             className="form-control"
@@ -56,7 +56,7 @@ export const Cards = (props) => {
       <div>
         {filterDisplay.map((item, i) => (
           <div
-            className="character-image-container element-loading"
+            className="cards-image-container element-loading"
             id={item.name || item.title}
           >
             <Link to={`/${props.folder}/${item.id || getIdInfo(item.url)}`}>
@@ -87,7 +87,7 @@ export const Cards = (props) => {
   } else {
     return (
       <div>
-        <div className="characters-search-bar mb-5">
+        <div className="cards-search-bar mb-5">
           <input
             onChange={(e) => handdleChange(e.target.value)}
             className="form-control"

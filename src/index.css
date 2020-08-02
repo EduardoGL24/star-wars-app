@@ -27,6 +27,7 @@
 body {
   font-family: "Quicksand", sans-serif !important;
   box-sizing: border-box;
+  background-color: black;
 }
 .no-margin {
   margin: 0px !important;
@@ -62,7 +63,7 @@ body {
   animation-delay: 0.1s;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .home-container,
   .character-container,
   .characters-container,

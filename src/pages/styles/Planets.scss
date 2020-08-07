@@ -1,0 +1,31 @@
+.planets-container{
+  min-height: 100vh;
+  padding: 7%;
+  background-image: url('../../images/vehicles.jpg');
+  background-size: 100%;
+  .card{
+    img{
+      min-height: 270px;
+      max-height: 330px;
+    }
+  }   
+}
+
+@media screen and (max-width: 991px){
+  .planets-container{
+    .card{
+      img{
+        height: 250px;
+      }
+    }     
+  }
+}
+@media screen and (max-width: 767px){
+    .planets-container{
+      .card{
+        img{
+          height: auto;
+        }
+      }     
+    }
+  }

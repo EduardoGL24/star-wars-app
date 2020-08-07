@@ -1,0 +1,30 @@
+.characters-container{
+    min-height: 100vh;
+    padding: 7%;
+    background-image: url('../../images/characters.jpg');
+    background-size: 100%;
+    .card{
+        img{
+            height: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 991px){
+  .characters-container{
+    .card{
+      img{
+        height: 250px;
+        }
+    }     
+  }
+}
+@media screen and (max-width: 767px){
+    .characters-container{
+      .card{
+        img{
+          height: auto;
+          }
+      }     
+    }
+  }

@@ -1,0 +1,35 @@
+.film-container{
+  min-height: 100vh;
+  padding: 6%;
+  background-image: url('../../images/film.jpg');
+  background-size: 100%;
+  .container-film-image{
+    img{
+      width: 100%;
+    }
+  }
+  .container-film-info{
+    padding: 15px 30px;
+    background-color: #FFF;
+    border-radius: 15px;
+    .film-info-box{
+      h4{
+        margin: 15px 0px;
+      }
+      ul{
+        list-style: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px){
+  .container-film-image{
+    padding: 25px 0px;
+  }
+  .container-film-info{
+    text-align: center;
+    .film-info-box{
+      padding: 10px 0px;
+    }
+  }
+}

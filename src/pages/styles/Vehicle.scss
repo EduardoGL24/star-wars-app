@@ -1,0 +1,45 @@
+.vehicle-container{
+  min-height: 100vh;
+  padding: 6%;
+  background-image: url('../../images/vehicle.jpg');
+  background-size: 100%;
+  .container-vehicle-image{
+    img{
+      width: 100%;
+    }
+  }
+  .container-vehicle-info{
+    padding: 15px 30px;
+    background-color: #FFF;
+    border-radius: 15px;
+    .vehicle-info-box{
+      h4{
+        margin: 15px 0px;
+      }
+      .vehicle-image-container{
+        display: inline-block;
+        text-align:  center;
+        padding-right: 10px;
+        img{
+          width: 180px;
+          height: 250px;
+          margin: 0 auto;
+        }
+        p{
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px){
+  .container-vehicle-image{
+    padding: 25px 0px;
+  }
+  .container-vehicle-info{
+    text-align: center;
+    .vehicle-info-box{
+      padding: 10px 0px;
+    }
+  }
+}

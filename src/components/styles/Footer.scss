@@ -1,0 +1,34 @@
+.footer-container {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  padding: 20px;
+  .footer-items-container {
+    .footer-item {
+      display: inline-block;
+      padding: 10px;
+      text-align: center;
+      img {
+        padding-bottom: 5px;
+        width: 32px;
+      }
+    }
+  }
+  .footer-contact-container {
+    .contact-item-container {
+      padding: 5px 0px;
+      img {
+        width: 32px;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-container {
+    text-align: center;
+    padding: 10px;
+  }
+}

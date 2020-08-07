@@ -1,0 +1,25 @@
+.not-found {
+  color: #fff;
+}
+.cards-search-bar {
+  .form-control {
+    min-height: 45px;
+  }
+}
+.cards-image-container {
+  display: inline-block;
+  text-align: center;
+  padding-right: 10px;
+  img {
+    width: 150px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  .image-planet {
+    max-width: 100%;
+    height: auto;
+  }
+  p {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,45 @@
+.starship-container{
+  min-height: 100vh;
+  padding: 6%;
+  background-image: url('../../images/starship.jpg');
+  background-size: 100%;
+  .container-starship-image{
+    img{
+      width: 100%;
+    }
+  }
+  .container-starship-info{
+    padding: 15px 30px;
+    background-color: #FFF;
+    border-radius: 15px;
+    .starship-info-box{
+      h4{
+        margin: 15px 0px;
+      }
+      .starship-image-container{
+        display: inline-block;
+        text-align:  center;
+        padding-right: 10px;
+        img{
+          width: 180px;
+          height: 250px;
+          margin: 0 auto;
+        }
+        p{
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px){
+  .container-starship-image{
+    padding: 25px 0px;
+  }
+  .container-starship-info{
+    text-align: center;
+    .starship-info-box{
+      padding: 10px 0px;
+    }
+  }
+}

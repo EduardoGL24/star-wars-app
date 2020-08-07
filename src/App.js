@@ -13,6 +13,7 @@ import Planets from "./pages/Planets";
 import Film from "./pages/Film";
 import Vehicle from "./pages/Vehicle";
 import Planet from "./pages/Planet";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route exact path="/vehicles/:id" component={Vehicle} />
           <Route exact path="/planets" component={Planets} />
           <Route exact path="/planets/:id" component={Planet} />
+          <Route component={NotFound} />
         </Switch>
       </Layout>
     </BrowserRouter>

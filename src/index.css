@@ -73,7 +73,8 @@ body {
   .starship-container,
   .starships-container,
   .vehicle-container,
-  .vehicles-container {
+  .vehicles-container,
+  .not-found-container {
     padding: 100px 10% !important;
   }
 }

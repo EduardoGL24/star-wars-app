@@ -51,9 +51,6 @@ const api = {
     getVehicleInfo(id) {
       return callApi(`vehicles/${id}`);
     },
-    getPlanetInfo(id) {
-      return callApi(`planets/${id}`);
-    },
   },
 };
 
